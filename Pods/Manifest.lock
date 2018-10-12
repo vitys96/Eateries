@@ -1,0 +1,16 @@
+PODS:
+  - PCLBlurEffectAlert (2.1.1)
+
+DEPENDENCIES:
+  - PCLBlurEffectAlert
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PCLBlurEffectAlert
+
+SPEC CHECKSUMS:
+  PCLBlurEffectAlert: 9671c027e17e9b054ed372fbecded167ea46daf9
+
+PODFILE CHECKSUM: 4e5c6b2116f0bef31f34b6ea7c77dad3233e256a
+
+COCOAPODS: 1.5.3
