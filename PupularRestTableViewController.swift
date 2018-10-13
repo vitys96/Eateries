@@ -89,7 +89,7 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         //        cell.layer.cornerRadius = 2
         cell.clipsToBounds = true
         
-        //        let restaurant = restaurantToDisplayAt(indexPath: indexPath)
+//                let restaurant = restaurantToDisplayAt(indexPath: indexPath)
         let restaurant = popularRests[indexPath.row]
         
         cell.imageViewPopular.image = UIImage(data: restaurant.image! as Data)
