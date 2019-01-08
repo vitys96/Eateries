@@ -2,21 +2,19 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     
   var window: UIWindow?
     lazy var coreDataStack = CoreDataStack()
-
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-    UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 0.25)
-    
-    UINavigationBar.appearance().tintColor = .black
+    UINavigationBar.appearance().barTintColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+    //#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 0.25)
+    UINavigationBar.appearance().tintColor = .white
     
     
     UITabBar.appearance().tintColor = .white
-    UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.79)
+    UITabBar.appearance().barTintColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+    //#colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.79)
 //    UITabBar.appearance().selectionIndicatorImage = UIImage(named: "tabSelectBG")
     
     let statusBarView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 20))
