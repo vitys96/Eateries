@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:Eateries.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "New Group">
+      <FileRef
+         location = "group:Eateries.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Eateries/../Detail"
+      name = "Detail">
+      <FileRef
+         location = "group:Detail/EateryDetailViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Detail/EateryDetailTableViewCell.swift">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Eateries/../Detail"
+      name = "Detail">
+      <FileRef
+         location = "group:Detail/EateryDetailViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Detail/EateryDetailTableViewCell.swift">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

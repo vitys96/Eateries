@@ -5,8 +5,8 @@ import CoreData
 class PupularRestTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var fetchResultController: NSFetchedResultsController<Restaurant>!
-    var restaurants: [Restaurant] = []
-    var count = 0
+//    var restaurants: [Restaurant] = []
+
     public var popularRests: [Restaurant] = []
     
     
@@ -40,7 +40,7 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         super.viewDidLoad()
         configNavigationController()
         
-        tableView.backgroundColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+        tableView.backgroundColor = UIColor(hue: 0.1333, saturation: 0.3, brightness: 1, alpha: 1.0)
         definesPresentationContext = true
         
         let attributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle), NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -69,17 +69,6 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         return popularRests.count
     }
     
-    //    func restaurantToDisplayAt(indexPath: IndexPath) -> Restaurant {
-    //        let restaurant: Restaurant
-    //        if restaurants[indexPath.row].isFavourite {
-    //            restaurant = popularRests[indexPath.row]
-    //        }
-    //        else {
-    //            restaurant = restaurants[indexPath.row]
-    //        }
-    //        return restaurant
-    //    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PopularRestTableViewCell
         
@@ -93,13 +82,29 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         let restaurant = popularRests[indexPath.row]
         
         cell.imageViewPopular.image = UIImage(data: restaurant.image! as Data)
-        cell.imageViewPopular.layer.cornerRadius = 37.5
+        cell.imageViewPopular.layer.cornerRadius = 10
         cell.imageViewPopular.clipsToBounds = true
         cell.nameLabelPopular.text = restaurant.name
-        cell.locationLabelPopular.text = restaurant.location
-//        cell.tyoeLabelPopular.text = restaurant.type
+
 //        cell.checkImageViewPopular.isHidden = restaurants[indexPath.row].isVisited ? false: true
         return cell
+    }
+    
+//    func restaurantToDisplayAt(indexPath: IndexPath) -> Restaurant {
+//        let restaurant: Restaurant
+//        restaurant = restaurants[indexPath.row]
+//        return restaurant
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "popularShow"
+        {
+            if let indexPath = tableView.indexPathForSelectedRow
+            {
+                let dvc = segue.destination as? TableViewController
+                dvc?.restaurant = popularRests[indexPath.row]
+            }
+        }
     }
     
 }

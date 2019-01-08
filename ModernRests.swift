@@ -13,7 +13,7 @@ class ModernRests {
     
     var restaraunt: Restaurant?
     
-    static func lala(name: String, location: String, type: String, isVisited: Bool, isFavourite: Bool, averageCheck: String, image: UIImage, isPhoto: Bool, star: Double ) {
+    static func addModernRests(name: String, location: String, type: String, isVisited: Bool, isFavourite: Bool, averageCheck: String?, image: UIImage, isPhoto: Bool, star: Double ) {
         guard let context = (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.persistentContainer.viewContext else { return }
         
         let restaurant = Restaurant(context: context)

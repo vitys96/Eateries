@@ -7,65 +7,161 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10C72CA340D056D1A7BE9DA242D6F08C /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FBEC91C32CEFFBAF53C4DBBECFE826 /* CosmosLayerHelper.swift */; };
+		118C076D9E6E5FD64FCA60C5F3078EA0 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61442AE6D5730E851EE2A092B410CB98 /* CosmosRating.swift */; };
+		12F0FA817A3B4397761768932E789E8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		25D9A08AABCEAB949DB35EA82FD9C98D /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B608912D3496F7B1EE3A00F13404225C /* RAMFumeAnimation.swift */; };
 		2E3EB5B04FBE318EB1D9BA330E805BFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
-		587D0466774EE9AE6B3C54C33E99C714 /* PCLBlurEffectAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3812507665B6F2D4CA2BAF282036CC /* PCLBlurEffectAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CBE8548EF0D1FE66D39AEFB3EB61A1C /* PCLBlurEffectAlert+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4330837DF9CD4B508FD34531D08FA4 /* PCLBlurEffectAlert+Controller.swift */; };
-		A773F771A6C9E4AA0992D022ECD219FC /* Pods-Eateries-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64822E3D20A4074B553B75A5DA3D8B7C /* Pods-Eateries-dummy.m */; };
-		B02406A76C5160EE123F806E865FB5C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		B1D3B3EE81952C9A51DC22FC79494A97 /* PCLBlurEffectAlert+TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21059DFD0ED664212C761AADC1615BD0 /* PCLBlurEffectAlert+TransitionAnimator.swift */; };
-		C74FE15AAF1A40FD71FDCF90AB1C886A /* PCLBlurEffectAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860DBDA77107CA66F4EB6F842533B598 /* PCLBlurEffectAlert.swift */; };
-		CC99819AD828ABAB5AFFB9FF17717A4E /* Pods-Eateries-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F94FC8820206AB29B13ABC0F7B8C9638 /* Pods-Eateries-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		363D5829F9E47F9020700ACE35418F5A /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B811DDCEFAD2D56465504B0DE6EB8 /* CosmosLayers.swift */; };
+		3AB236AD57AFEF156C2683CFAAE4B11A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		433EED927B529C5FDB6EF36055B6BD4D /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B9C84F6F29D85DCC552672792D989 /* RAMBadge.swift */; };
+		496AB2DC00CE6ECB251B780DB0B46378 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F92768B5BC334BC3707C655558A7A /* CosmosDefaultSettings.swift */; };
+		4CE94770E88B40DD3F06797F9B35B81A /* Cosmos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9357F668379860AE9B6E47EC1EFE579B /* Cosmos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		541706202C03B3EAE135235945337763 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF653488FB86B11F32E7D1C421A6495 /* CosmosView.swift */; };
+		587D0466774EE9AE6B3C54C33E99C714 /* PCLBlurEffectAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C57B1C2562473B923AB61FF3397E02B8 /* PCLBlurEffectAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D3718CCFBD5AA94C8BCA2DE00867B14 /* Cosmos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AFAF84FCF62565B85B6DB8391A106 /* Cosmos-dummy.m */; };
+		67A065414CE8149805FD8F2E537AA05F /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174446308F3DBFFA2275097D5EE12349 /* RAMAnimatedTabBarController.swift */; };
+		79FCAEB6D480B693844C178AB64F3B86 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ADD9F0643902743C398468E5AEE523 /* CosmosTouch.swift */; };
+		87A0B42A5F50ED5238805F2F33365ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		87BA6A609FB54DF718D6BF672DB82ACF /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42FA8352167851D0914D8D1BE4444F6 /* RAMRotationAnimation.swift */; };
+		87BE14A38733F873845312E95B7B752D /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9EA8A803D409765051C871E7069622 /* CosmosTouchTarget.swift */; };
+		891B8D6785AB17B44C213D6518955588 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DB1A7D47766842BF013DC63C45C78 /* StarFillMode.swift */; };
+		8A6B7AE8E4CFA6A4B1545D7A3CC15E23 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692EADE46B0A780D4AA9C714BD7C755 /* CosmosSettings.swift */; };
+		8CBE8548EF0D1FE66D39AEFB3EB61A1C /* PCLBlurEffectAlert+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679C102C337AF77D54AAFFBF976B19DE /* PCLBlurEffectAlert+Controller.swift */; };
+		8E41DFDA668DB5FDF7D9F86BBDB72CA1 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE472E060F38F878A3664A467F733262 /* RightToLeft.swift */; };
+		8FFD6B7CB3018E250891ADC206EE4025 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D115CBCB50B280ABCBEBDA2598A14 /* CosmosSize.swift */; };
+		9273D94FB02ED96D761EFC2320E2245E /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B68ABD25B15358B5619E3AD16F2B1 /* StarLayer.swift */; };
+		A1078EBDECF00DAAF0A4B9E0AD5C68C0 /* RAMAnimatedTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C97BF69EAFE70DBAC3EA4B59FAE8023 /* RAMAnimatedTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3406E824DB12760AF42505AFD211E19 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B77D5FEFE036B8AED21858F98AD8BAD /* RAMItemAnimationProtocol.swift */; };
+		AC616FC95EA49F7557D65EBE2D31C4C0 /* Pods-Eateries-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F94FC8820206AB29B13ABC0F7B8C9638 /* Pods-Eateries-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1D3B3EE81952C9A51DC22FC79494A97 /* PCLBlurEffectAlert+TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E623F246CE83403E41568C6B39AB842F /* PCLBlurEffectAlert+TransitionAnimator.swift */; };
+		B49BA8D5A3F686E5B5BB38FE7940B474 /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F349B7CDC1A2B790E529D94D28DDA9 /* CosmosAccessibility.swift */; };
+		C217704F02251CFCAA0625F3232DFD67 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADCFF81EDC0B4B8D41542F1A4B73456 /* CosmosLocalizedRating.swift */; };
+		C74FE15AAF1A40FD71FDCF90AB1C886A /* PCLBlurEffectAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF698F58BEF081843A993323668B4C /* PCLBlurEffectAlert.swift */; };
+		CD67490F8F91FDA8D94147458DD6E9ED /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95431BE4A45E5C85450BCD120C533158 /* RAMFrameItemAnimation.swift */; };
 		D977DF15141C279BDFB7C1A515AD2652 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		E6BB7863E446DAE6585B03ED23032EEC /* PCLBlurEffectAlert+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC1AFB8F3000F99E52FD539EFB4899 /* PCLBlurEffectAlert+Action.swift */; };
-		E7DE1AFE57B28D826FC3559A2D5B5F93 /* PCLBlurEffectAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7095B8EAB3E11874208B69E5295839CC /* PCLBlurEffectAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6641B4FAA901FDF41216149FA08EE12 /* PCLBlurEffectAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B45B808236762A3080AF9DDFB92CB7 /* PCLBlurEffectAlert-dummy.m */; };
+		E6BB7863E446DAE6585B03ED23032EEC /* PCLBlurEffectAlert+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BD8709A19EFC22B19A516F3987DCD2 /* PCLBlurEffectAlert+Action.swift */; };
+		E6BFD423AD3B8F0C50512710C28AE37A /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B0E832A4A558C7A63D9B4566A3B13 /* RAMBounceAnimation.swift */; };
+		E7DE1AFE57B28D826FC3559A2D5B5F93 /* PCLBlurEffectAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 5497440D44036B13BC6BC388A9CEB58C /* PCLBlurEffectAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF17FAE9211AE179734B12CCA9912E09 /* Pods-Eateries-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64822E3D20A4074B553B75A5DA3D8B7C /* Pods-Eateries-dummy.m */; };
+		F448526CB611E263DD42BE54E5444F6A /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40EB6D54D51A63C00FAD9EB4880DC34 /* CosmosText.swift */; };
+		F5788B6D6C6399EAF03455286E980235 /* RAMAnimatedTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0215898EF3BBF58AA1BFFB8CEC4A6FED /* RAMAnimatedTabBarController-dummy.m */; };
+		F65FD2C70D373079B5405A486EDA477F /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869CC176DC985DE9A7302358A834197B /* RAMTransitionItemAnimations.swift */; };
+		F6641B4FAA901FDF41216149FA08EE12 /* PCLBlurEffectAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7986793AA69F9E5CC58F474CA85110CA /* PCLBlurEffectAlert-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EB76C567F28376984C5ABCD0801A1AD6 /* PBXContainerItemProxy */ = {
+		5FB4BBE6AE0B1A4ECA748B9B4AEE01D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 224580824D4276BBCB37A928CF5E9482;
+			remoteInfo = Cosmos;
+		};
+		A45B5DC1B63F66E05CCB49CFCC5805D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 97867DFDD152B3D4F4EDF22A525842AF;
 			remoteInfo = PCLBlurEffectAlert;
 		};
+		B3B8F3E2BFF40DAB139879961C941C16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D47776324C2F65D80D0B3DE222EA784;
+			remoteInfo = RAMAnimatedTabBarController;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0215898EF3BBF58AA1BFFB8CEC4A6FED /* RAMAnimatedTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RAMAnimatedTabBarController-dummy.m"; sourceTree = "<group>"; };
 		04487D5221BDA04C83562F3AE3423DAB /* Pods-Eateries-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Eateries-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0A3812507665B6F2D4CA2BAF282036CC /* PCLBlurEffectAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCLBlurEffectAlert-umbrella.h"; sourceTree = "<group>"; };
+		0E0E3DCC06072107483F10BF8534CDB1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E8D115CBCB50B280ABCBEBDA2598A14 /* CosmosSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
 		0F49028ADBB725906DE8880B4D31DBFF /* Pods-Eateries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Eateries.release.xcconfig"; sourceTree = "<group>"; };
-		13E05F530FEA1417D1C5E7BA9AED851D /* PCLBlurEffectAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PCLBlurEffectAlert.xcconfig; sourceTree = "<group>"; };
+		109DA0E9783C54FAF14298AFD5E0579C /* RAMAnimatedTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RAMAnimatedTabBarController.xcconfig; sourceTree = "<group>"; };
+		16BD8709A19EFC22B19A516F3987DCD2 /* PCLBlurEffectAlert+Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PCLBlurEffectAlert+Action.swift"; path = "Sources/PCLBlurEffectAlert+Action.swift"; sourceTree = "<group>"; };
+		174446308F3DBFFA2275097D5EE12349 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		176B811DDCEFAD2D56465504B0DE6EB8 /* CosmosLayers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
 		1BB0ADDD104C5DDE9F9704A338C241DA /* Pods-Eateries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Eateries.debug.xcconfig"; sourceTree = "<group>"; };
-		21059DFD0ED664212C761AADC1615BD0 /* PCLBlurEffectAlert+TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PCLBlurEffectAlert+TransitionAnimator.swift"; path = "Sources/PCLBlurEffectAlert+TransitionAnimator.swift"; sourceTree = "<group>"; };
-		32C82E88127DE3CEAEA5569B69A02759 /* PCLBlurEffectAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PCLBlurEffectAlert.modulemap; sourceTree = "<group>"; };
+		23F349B7CDC1A2B790E529D94D28DDA9 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
+		2923AECFF751ED6EB11A536B9A9B1A2D /* PCLBlurEffectAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCLBlurEffectAlert-prefix.pch"; sourceTree = "<group>"; };
 		3493B126BA35129094A47757D2271A85 /* Pods-Eateries-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Eateries-frameworks.sh"; sourceTree = "<group>"; };
-		3E4330837DF9CD4B508FD34531D08FA4 /* PCLBlurEffectAlert+Controller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PCLBlurEffectAlert+Controller.swift"; path = "Sources/PCLBlurEffectAlert+Controller.swift"; sourceTree = "<group>"; };
+		3692EADE46B0A780D4AA9C714BD7C755 /* CosmosSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
+		3C97BF69EAFE70DBAC3EA4B59FAE8023 /* RAMAnimatedTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-umbrella.h"; sourceTree = "<group>"; };
+		44B9BA76A1E77FB91EC6D87C2689294A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50E9571685AB28A0B5831D4FB979D7D1 /* Pods-Eateries-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Eateries-acknowledgements.plist"; sourceTree = "<group>"; };
-		518EE7F4AC5695FFEE685B87D949CB15 /* PCLBlurEffectAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCLBlurEffectAlert-prefix.pch"; sourceTree = "<group>"; };
-		55DC1AFB8F3000F99E52FD539EFB4899 /* PCLBlurEffectAlert+Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PCLBlurEffectAlert+Action.swift"; path = "Sources/PCLBlurEffectAlert+Action.swift"; sourceTree = "<group>"; };
+		53FB54BB0449EA52EC153E0A68FCC052 /* Cosmos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cosmos.modulemap; sourceTree = "<group>"; };
+		5497440D44036B13BC6BC388A9CEB58C /* PCLBlurEffectAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLBlurEffectAlert.h; path = Sources/PCLBlurEffectAlert.h; sourceTree = "<group>"; };
+		563B9C84F6F29D85DCC552672792D989 /* RAMBadge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBadge.swift; path = RAMAnimatedTabBarController/RAMBadge/RAMBadge.swift; sourceTree = "<group>"; };
+		57FBEC91C32CEFFBAF53C4DBBECFE826 /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
 		5AE7BF0ABA7A69705EACA298DA22398E /* Pods-Eateries.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Eateries.modulemap"; sourceTree = "<group>"; };
-		6332D34639848AC582598F9AA0AEFE24 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61442AE6D5730E851EE2A092B410CB98 /* CosmosRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
 		64822E3D20A4074B553B75A5DA3D8B7C /* Pods-Eateries-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Eateries-dummy.m"; sourceTree = "<group>"; };
-		7095B8EAB3E11874208B69E5295839CC /* PCLBlurEffectAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PCLBlurEffectAlert.h; path = Sources/PCLBlurEffectAlert.h; sourceTree = "<group>"; };
-		860DBDA77107CA66F4EB6F842533B598 /* PCLBlurEffectAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCLBlurEffectAlert.swift; path = Sources/PCLBlurEffectAlert.swift; sourceTree = "<group>"; };
+		679C102C337AF77D54AAFFBF976B19DE /* PCLBlurEffectAlert+Controller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PCLBlurEffectAlert+Controller.swift"; path = "Sources/PCLBlurEffectAlert+Controller.swift"; sourceTree = "<group>"; };
+		695D0B29C1DAAA85C22BFE8ACA4050D7 /* Cosmos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.xcconfig; sourceTree = "<group>"; };
+		6B77D5FEFE036B8AED21858F98AD8BAD /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMItemAnimationProtocol.swift; path = RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		7986793AA69F9E5CC58F474CA85110CA /* PCLBlurEffectAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PCLBlurEffectAlert-dummy.m"; sourceTree = "<group>"; };
+		7A5718AA6701FA72B4953ED8734468C7 /* RAMAnimatedTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RAMAnimatedTabBarController.framework; path = RAMAnimatedTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		845B0E832A4A558C7A63D9B4566A3B13 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMBounceAnimation.swift; path = RAMAnimatedTabBarController/Animations/BounceAnimation/RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		869CC176DC985DE9A7302358A834197B /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMTransitionItemAnimations.swift; path = RAMAnimatedTabBarController/Animations/TransitionAniamtions/RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
+		8A6B68ABD25B15358B5619E3AD16F2B1 /* StarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
 		8AD5ECBDC7F32A2AA7C86F5C2C19EE6A /* Pods-Eateries-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Eateries-resources.sh"; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		91D50C1A2D9F67F89A51ED1A0B24C7E1 /* Pods_Eateries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Eateries.framework; path = "Pods-Eateries.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9357F668379860AE9B6E47EC1EFE579B /* Cosmos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95431BE4A45E5C85450BCD120C533158 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFrameItemAnimation.swift; path = RAMAnimatedTabBarController/Animations/FrameAnimation/RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		95ADD9F0643902743C398468E5AEE523 /* CosmosTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
+		9CEF698F58BEF081843A993323668B4C /* PCLBlurEffectAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCLBlurEffectAlert.swift; path = Sources/PCLBlurEffectAlert.swift; sourceTree = "<group>"; };
+		ACC2FCEC732B3856248B3CE65F30B1B5 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13F92768B5BC334BC3707C655558A7A /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
 		B20392C8D5F677AB82D4B243C0D34F64 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B46CD8F6F74F17B44858C71A10264337 /* PCLBlurEffectAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PCLBlurEffectAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E3406B8C07D6E46E1C126BAF2E25FE /* PCLBlurEffectAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PCLBlurEffectAlert.modulemap; sourceTree = "<group>"; };
+		B4B4E45D48C585B2501D740D8BC44C8A /* RAMAnimatedTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RAMAnimatedTabBarController-prefix.pch"; sourceTree = "<group>"; };
+		B608912D3496F7B1EE3A00F13404225C /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMFumeAnimation.swift; path = RAMAnimatedTabBarController/Animations/FumeAnimation/RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		B61AFAF84FCF62565B85B6DB8391A106 /* Cosmos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cosmos-dummy.m"; sourceTree = "<group>"; };
+		B9639CDF1AC07745288F6A40F84F163A /* PCLBlurEffectAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PCLBlurEffectAlert.xcconfig; sourceTree = "<group>"; };
 		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C9B45B808236762A3080AF9DDFB92CB7 /* PCLBlurEffectAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PCLBlurEffectAlert-dummy.m"; sourceTree = "<group>"; };
-		DEF2D770785E024E7821C21F14B8550E /* Pods_Eateries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eateries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9ED0F931D1127C8F860298A777DA28 /* Cosmos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cosmos-prefix.pch"; sourceTree = "<group>"; };
+		C1437E065E8D92F90C95784F192CE91C /* PCLBlurEffectAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PCLBlurEffectAlert.framework; path = PCLBlurEffectAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1BD8C5B8A009F774ED8F4A0C3515AB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57B1C2562473B923AB61FF3397E02B8 /* PCLBlurEffectAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PCLBlurEffectAlert-umbrella.h"; sourceTree = "<group>"; };
+		CA9EA8A803D409765051C871E7069622 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		CB8B02FE33400C994B735BADFA7E6047 /* RAMAnimatedTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RAMAnimatedTabBarController.modulemap; sourceTree = "<group>"; };
+		D42FA8352167851D0914D8D1BE4444F6 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RAMRotationAnimation.swift; path = RAMAnimatedTabBarController/Animations/RotationAnimation/RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		D45DB1A7D47766842BF013DC63C45C78 /* StarFillMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
+		DFF653488FB86B11F32E7D1C421A6495 /* CosmosView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		E40EB6D54D51A63C00FAD9EB4880DC34 /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		E623F246CE83403E41568C6B39AB842F /* PCLBlurEffectAlert+TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PCLBlurEffectAlert+TransitionAnimator.swift"; path = "Sources/PCLBlurEffectAlert+TransitionAnimator.swift"; sourceTree = "<group>"; };
+		EE472E060F38F878A3664A467F733262 /* RightToLeft.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/Helpers/RightToLeft.swift; sourceTree = "<group>"; };
 		F94FC8820206AB29B13ABC0F7B8C9638 /* Pods-Eateries-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Eateries-umbrella.h"; sourceTree = "<group>"; };
+		FADCFF81EDC0B4B8D41542F1A4B73456 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7A04391D3339A17412524B2520C01406 /* Frameworks */ = {
+		430DC5D1578F90A7ACFB6B9AC3E6A768 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B02406A76C5160EE123F806E865FB5C1 /* Foundation.framework in Frameworks */,
+				12F0FA817A3B4397761768932E789E8F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EF5B7A1EAEF7AAE1780E8EA9C5FC807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB236AD57AFEF156C2683CFAAE4B11A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FAC896F51AC35EF9702CA23E57FEB27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A0B42A5F50ED5238805F2F33365ED5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,27 +194,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5742F217FA2BABBC240CFC7A792FEED0 /* Products */ = {
+		7A05988BD7CBA9E439E3BFDD8D2D3BD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B46CD8F6F74F17B44858C71A10264337 /* PCLBlurEffectAlert.framework */,
-				DEF2D770785E024E7821C21F14B8550E /* Pods_Eateries.framework */,
+				ACC2FCEC732B3856248B3CE65F30B1B5 /* Cosmos.framework */,
+				C1437E065E8D92F90C95784F192CE91C /* PCLBlurEffectAlert.framework */,
+				91D50C1A2D9F67F89A51ED1A0B24C7E1 /* Pods_Eateries.framework */,
+				7A5718AA6701FA72B4953ED8734468C7 /* RAMAnimatedTabBarController.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5A3700F4AA82FC45DB931BE5EF629116 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6332D34639848AC582598F9AA0AEFE24 /* Info.plist */,
-				32C82E88127DE3CEAEA5569B69A02759 /* PCLBlurEffectAlert.modulemap */,
-				13E05F530FEA1417D1C5E7BA9AED851D /* PCLBlurEffectAlert.xcconfig */,
-				C9B45B808236762A3080AF9DDFB92CB7 /* PCLBlurEffectAlert-dummy.m */,
-				518EE7F4AC5695FFEE685B87D949CB15 /* PCLBlurEffectAlert-prefix.pch */,
-				0A3812507665B6F2D4CA2BAF282036CC /* PCLBlurEffectAlert-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PCLBlurEffectAlert";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -126,8 +210,8 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				87BFF6455DE125506EB26C035DE245BB /* Pods */,
-				5742F217FA2BABBC240CFC7A792FEED0 /* Products */,
+				EBB8C1B917C041CB16A2ED72425CCFDE /* Pods */,
+				7A05988BD7CBA9E439E3BFDD8D2D3BD5 /* Products */,
 				92E2B8003925F15C2AD43380AB07B0E7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -150,12 +234,18 @@
 			path = "Target Support Files/Pods-Eateries";
 			sourceTree = "<group>";
 		};
-		87BFF6455DE125506EB26C035DE245BB /* Pods */ = {
+		892CCD55CF610EECDEA99552FF51FDB1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A81610AE027BAC313FAAEAF2382387ED /* PCLBlurEffectAlert */,
+				53FB54BB0449EA52EC153E0A68FCC052 /* Cosmos.modulemap */,
+				695D0B29C1DAAA85C22BFE8ACA4050D7 /* Cosmos.xcconfig */,
+				B61AFAF84FCF62565B85B6DB8391A106 /* Cosmos-dummy.m */,
+				BF9ED0F931D1127C8F860298A777DA28 /* Cosmos-prefix.pch */,
+				9357F668379860AE9B6E47EC1EFE579B /* Cosmos-umbrella.h */,
+				C1BD8C5B8A009F774ED8F4A0C3515AB5 /* Info.plist */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Cosmos";
 			sourceTree = "<group>";
 		};
 		92E2B8003925F15C2AD43380AB07B0E7 /* Targets Support Files */ = {
@@ -166,22 +256,118 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A81610AE027BAC313FAAEAF2382387ED /* PCLBlurEffectAlert */ = {
+		C3B1AD61DF00297B3E5E4109A26A3363 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7095B8EAB3E11874208B69E5295839CC /* PCLBlurEffectAlert.h */,
-				860DBDA77107CA66F4EB6F842533B598 /* PCLBlurEffectAlert.swift */,
-				55DC1AFB8F3000F99E52FD539EFB4899 /* PCLBlurEffectAlert+Action.swift */,
-				3E4330837DF9CD4B508FD34531D08FA4 /* PCLBlurEffectAlert+Controller.swift */,
-				21059DFD0ED664212C761AADC1615BD0 /* PCLBlurEffectAlert+TransitionAnimator.swift */,
-				5A3700F4AA82FC45DB931BE5EF629116 /* Support Files */,
+				0E0E3DCC06072107483F10BF8534CDB1 /* Info.plist */,
+				B2E3406B8C07D6E46E1C126BAF2E25FE /* PCLBlurEffectAlert.modulemap */,
+				B9639CDF1AC07745288F6A40F84F163A /* PCLBlurEffectAlert.xcconfig */,
+				7986793AA69F9E5CC58F474CA85110CA /* PCLBlurEffectAlert-dummy.m */,
+				2923AECFF751ED6EB11A536B9A9B1A2D /* PCLBlurEffectAlert-prefix.pch */,
+				C57B1C2562473B923AB61FF3397E02B8 /* PCLBlurEffectAlert-umbrella.h */,
 			);
+			name = "Support Files";
+			path = "../Target Support Files/PCLBlurEffectAlert";
+			sourceTree = "<group>";
+		};
+		CFBB31908411D1D3709FE827685613F4 /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				23F349B7CDC1A2B790E529D94D28DDA9 /* CosmosAccessibility.swift */,
+				B13F92768B5BC334BC3707C655558A7A /* CosmosDefaultSettings.swift */,
+				57FBEC91C32CEFFBAF53C4DBBECFE826 /* CosmosLayerHelper.swift */,
+				176B811DDCEFAD2D56465504B0DE6EB8 /* CosmosLayers.swift */,
+				FADCFF81EDC0B4B8D41542F1A4B73456 /* CosmosLocalizedRating.swift */,
+				61442AE6D5730E851EE2A092B410CB98 /* CosmosRating.swift */,
+				3692EADE46B0A780D4AA9C714BD7C755 /* CosmosSettings.swift */,
+				0E8D115CBCB50B280ABCBEBDA2598A14 /* CosmosSize.swift */,
+				E40EB6D54D51A63C00FAD9EB4880DC34 /* CosmosText.swift */,
+				95ADD9F0643902743C398468E5AEE523 /* CosmosTouch.swift */,
+				CA9EA8A803D409765051C871E7069622 /* CosmosTouchTarget.swift */,
+				DFF653488FB86B11F32E7D1C421A6495 /* CosmosView.swift */,
+				EE472E060F38F878A3664A467F733262 /* RightToLeft.swift */,
+				D45DB1A7D47766842BF013DC63C45C78 /* StarFillMode.swift */,
+				8A6B68ABD25B15358B5619E3AD16F2B1 /* StarLayer.swift */,
+				892CCD55CF610EECDEA99552FF51FDB1 /* Support Files */,
+			);
+			name = Cosmos;
+			path = Cosmos;
+			sourceTree = "<group>";
+		};
+		D86E1D2E7D03FD800699DC82EC36FE36 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				174446308F3DBFFA2275097D5EE12349 /* RAMAnimatedTabBarController.swift */,
+				563B9C84F6F29D85DCC552672792D989 /* RAMBadge.swift */,
+				845B0E832A4A558C7A63D9B4566A3B13 /* RAMBounceAnimation.swift */,
+				95431BE4A45E5C85450BCD120C533158 /* RAMFrameItemAnimation.swift */,
+				B608912D3496F7B1EE3A00F13404225C /* RAMFumeAnimation.swift */,
+				6B77D5FEFE036B8AED21858F98AD8BAD /* RAMItemAnimationProtocol.swift */,
+				D42FA8352167851D0914D8D1BE4444F6 /* RAMRotationAnimation.swift */,
+				869CC176DC985DE9A7302358A834197B /* RAMTransitionItemAnimations.swift */,
+				F217BFCC3305DB027F2B4C25E78E3E86 /* Support Files */,
+			);
+			name = RAMAnimatedTabBarController;
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		EBB8C1B917C041CB16A2ED72425CCFDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFBB31908411D1D3709FE827685613F4 /* Cosmos */,
+				F474A47A09E247FEE14C9CC612F94DC5 /* PCLBlurEffectAlert */,
+				D86E1D2E7D03FD800699DC82EC36FE36 /* RAMAnimatedTabBarController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F217BFCC3305DB027F2B4C25E78E3E86 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				44B9BA76A1E77FB91EC6D87C2689294A /* Info.plist */,
+				CB8B02FE33400C994B735BADFA7E6047 /* RAMAnimatedTabBarController.modulemap */,
+				109DA0E9783C54FAF14298AFD5E0579C /* RAMAnimatedTabBarController.xcconfig */,
+				0215898EF3BBF58AA1BFFB8CEC4A6FED /* RAMAnimatedTabBarController-dummy.m */,
+				B4B4E45D48C585B2501D740D8BC44C8A /* RAMAnimatedTabBarController-prefix.pch */,
+				3C97BF69EAFE70DBAC3EA4B59FAE8023 /* RAMAnimatedTabBarController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RAMAnimatedTabBarController";
+			sourceTree = "<group>";
+		};
+		F474A47A09E247FEE14C9CC612F94DC5 /* PCLBlurEffectAlert */ = {
+			isa = PBXGroup;
+			children = (
+				5497440D44036B13BC6BC388A9CEB58C /* PCLBlurEffectAlert.h */,
+				9CEF698F58BEF081843A993323668B4C /* PCLBlurEffectAlert.swift */,
+				16BD8709A19EFC22B19A516F3987DCD2 /* PCLBlurEffectAlert+Action.swift */,
+				679C102C337AF77D54AAFFBF976B19DE /* PCLBlurEffectAlert+Controller.swift */,
+				E623F246CE83403E41568C6B39AB842F /* PCLBlurEffectAlert+TransitionAnimator.swift */,
+				C3B1AD61DF00297B3E5E4109A26A3363 /* Support Files */,
+			);
+			name = PCLBlurEffectAlert;
 			path = PCLBlurEffectAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		048A7A201C0B16D53552FB36B28D562A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1078EBDECF00DAAF0A4B9E0AD5C68C0 /* RAMAnimatedTabBarController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338C998F2FE58D9A1B06BCE40D1AC4DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC616FC95EA49F7557D65EBE2D31C4C0 /* Pods-Eateries-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C7A5533C770511D7B9F68AC635DC23B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,34 +377,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1C3B0FC3B9E6F9312068E184E8D56FD /* Headers */ = {
+		92B6B3E77B43641E47510C8F57963B9B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC99819AD828ABAB5AFFB9FF17717A4E /* Pods-Eateries-umbrella.h in Headers */,
+				4CE94770E88B40DD3F06797F9B35B81A /* Cosmos-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		72B74FACF10580CAD505B90275DCC90A /* Pods-Eateries */ = {
+		224580824D4276BBCB37A928CF5E9482 /* Cosmos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F172EB7683A9D920D990E6B844A3EE1B /* Build configuration list for PBXNativeTarget "Pods-Eateries" */;
+			buildConfigurationList = 7D6C475B9EA32C4BBF9FABE9BD31D7DC /* Build configuration list for PBXNativeTarget "Cosmos" */;
 			buildPhases = (
-				C1C3B0FC3B9E6F9312068E184E8D56FD /* Headers */,
-				1361D935F1DDD0EE583659D81BA47BE0 /* Sources */,
-				7A04391D3339A17412524B2520C01406 /* Frameworks */,
-				90C18FFF7629B661A20312F3AA7F62A0 /* Resources */,
+				92B6B3E77B43641E47510C8F57963B9B /* Headers */,
+				8B62D29A24F15BA427D82E19A8E16A38 /* Sources */,
+				4EF5B7A1EAEF7AAE1780E8EA9C5FC807 /* Frameworks */,
+				D6FD094E21EDFCFCFE1B6D13E36D1F3A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B680E1F1CB8817CBF1059D3AA9F1FA1E /* PBXTargetDependency */,
 			);
-			name = "Pods-Eateries";
-			productName = "Pods-Eateries";
-			productReference = DEF2D770785E024E7821C21F14B8550E /* Pods_Eateries.framework */;
+			name = Cosmos;
+			productName = Cosmos;
+			productReference = ACC2FCEC732B3856248B3CE65F30B1B5 /* Cosmos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		97867DFDD152B3D4F4EDF22A525842AF /* PCLBlurEffectAlert */ = {
@@ -236,7 +421,46 @@
 			);
 			name = PCLBlurEffectAlert;
 			productName = PCLBlurEffectAlert;
-			productReference = B46CD8F6F74F17B44858C71A10264337 /* PCLBlurEffectAlert.framework */;
+			productReference = C1437E065E8D92F90C95784F192CE91C /* PCLBlurEffectAlert.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9D47776324C2F65D80D0B3DE222EA784 /* RAMAnimatedTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5524A6CEC08E0FF6C870EBEE6088F9B6 /* Build configuration list for PBXNativeTarget "RAMAnimatedTabBarController" */;
+			buildPhases = (
+				048A7A201C0B16D53552FB36B28D562A /* Headers */,
+				2B2FBF2D48BAFBF8BD8388B861D0895B /* Sources */,
+				8FAC896F51AC35EF9702CA23E57FEB27 /* Frameworks */,
+				9CBC7B4A079DB6C39A89A68AB39E72A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RAMAnimatedTabBarController;
+			productName = RAMAnimatedTabBarController;
+			productReference = 7A5718AA6701FA72B4953ED8734468C7 /* RAMAnimatedTabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA75E95B9A3D424888B48484E8355709 /* Pods-Eateries */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80C56795D71CD291B3D91F4C103CB942 /* Build configuration list for PBXNativeTarget "Pods-Eateries" */;
+			buildPhases = (
+				338C998F2FE58D9A1B06BCE40D1AC4DD /* Headers */,
+				F873941EB5CB93049B906E692E86792B /* Sources */,
+				430DC5D1578F90A7ACFB6B9AC3E6A768 /* Frameworks */,
+				576774641A6C1FB5083AC27286726E28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D34B1B1C81ADD9B355AD4F116BE02BC /* PBXTargetDependency */,
+				02AD5C846CF57351B2444852981AFC78 /* PBXTargetDependency */,
+				5CA77AF31E5B8C8CDE74103536F9F3FC /* PBXTargetDependency */,
+			);
+			name = "Pods-Eateries";
+			productName = "Pods-Eateries";
+			productReference = 91D50C1A2D9F67F89A51ED1A0B24C7E1 /* Pods_Eateries.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -247,11 +471,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					97867DFDD152B3D4F4EDF22A525842AF = {
-						LastSwiftMigration = 1000;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -261,12 +480,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5742F217FA2BABBC240CFC7A792FEED0 /* Products */;
+			productRefGroup = 7A05988BD7CBA9E439E3BFDD8D2D3BD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				224580824D4276BBCB37A928CF5E9482 /* Cosmos */,
 				97867DFDD152B3D4F4EDF22A525842AF /* PCLBlurEffectAlert */,
-				72B74FACF10580CAD505B90275DCC90A /* Pods-Eateries */,
+				AA75E95B9A3D424888B48484E8355709 /* Pods-Eateries */,
+				9D47776324C2F65D80D0B3DE222EA784 /* RAMAnimatedTabBarController */,
 			);
 		};
 /* End PBXProject section */
@@ -279,7 +500,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90C18FFF7629B661A20312F3AA7F62A0 /* Resources */ = {
+		576774641A6C1FB5083AC27286726E28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CBC7B4A079DB6C39A89A68AB39E72A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6FD094E21EDFCFCFE1B6D13E36D1F3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,11 +524,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1361D935F1DDD0EE583659D81BA47BE0 /* Sources */ = {
+		2B2FBF2D48BAFBF8BD8388B861D0895B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A773F771A6C9E4AA0992D022ECD219FC /* Pods-Eateries-dummy.m in Sources */,
+				F5788B6D6C6399EAF03455286E980235 /* RAMAnimatedTabBarController-dummy.m in Sources */,
+				67A065414CE8149805FD8F2E537AA05F /* RAMAnimatedTabBarController.swift in Sources */,
+				433EED927B529C5FDB6EF36055B6BD4D /* RAMBadge.swift in Sources */,
+				E6BFD423AD3B8F0C50512710C28AE37A /* RAMBounceAnimation.swift in Sources */,
+				CD67490F8F91FDA8D94147458DD6E9ED /* RAMFrameItemAnimation.swift in Sources */,
+				25D9A08AABCEAB949DB35EA82FD9C98D /* RAMFumeAnimation.swift in Sources */,
+				A3406E824DB12760AF42505AFD211E19 /* RAMItemAnimationProtocol.swift in Sources */,
+				87BA6A609FB54DF718D6BF672DB82ACF /* RAMRotationAnimation.swift in Sources */,
+				F65FD2C70D373079B5405A486EDA477F /* RAMTransitionItemAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,116 +552,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B62D29A24F15BA427D82E19A8E16A38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D3718CCFBD5AA94C8BCA2DE00867B14 /* Cosmos-dummy.m in Sources */,
+				B49BA8D5A3F686E5B5BB38FE7940B474 /* CosmosAccessibility.swift in Sources */,
+				496AB2DC00CE6ECB251B780DB0B46378 /* CosmosDefaultSettings.swift in Sources */,
+				10C72CA340D056D1A7BE9DA242D6F08C /* CosmosLayerHelper.swift in Sources */,
+				363D5829F9E47F9020700ACE35418F5A /* CosmosLayers.swift in Sources */,
+				C217704F02251CFCAA0625F3232DFD67 /* CosmosLocalizedRating.swift in Sources */,
+				118C076D9E6E5FD64FCA60C5F3078EA0 /* CosmosRating.swift in Sources */,
+				8A6B7AE8E4CFA6A4B1545D7A3CC15E23 /* CosmosSettings.swift in Sources */,
+				8FFD6B7CB3018E250891ADC206EE4025 /* CosmosSize.swift in Sources */,
+				F448526CB611E263DD42BE54E5444F6A /* CosmosText.swift in Sources */,
+				79FCAEB6D480B693844C178AB64F3B86 /* CosmosTouch.swift in Sources */,
+				87BE14A38733F873845312E95B7B752D /* CosmosTouchTarget.swift in Sources */,
+				541706202C03B3EAE135235945337763 /* CosmosView.swift in Sources */,
+				8E41DFDA668DB5FDF7D9F86BBDB72CA1 /* RightToLeft.swift in Sources */,
+				891B8D6785AB17B44C213D6518955588 /* StarFillMode.swift in Sources */,
+				9273D94FB02ED96D761EFC2320E2245E /* StarLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F873941EB5CB93049B906E692E86792B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF17FAE9211AE179734B12CCA9912E09 /* Pods-Eateries-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B680E1F1CB8817CBF1059D3AA9F1FA1E /* PBXTargetDependency */ = {
+		02AD5C846CF57351B2444852981AFC78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PCLBlurEffectAlert;
 			target = 97867DFDD152B3D4F4EDF22A525842AF /* PCLBlurEffectAlert */;
-			targetProxy = EB76C567F28376984C5ABCD0801A1AD6 /* PBXContainerItemProxy */;
+			targetProxy = A45B5DC1B63F66E05CCB49CFCC5805D5 /* PBXContainerItemProxy */;
+		};
+		5CA77AF31E5B8C8CDE74103536F9F3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RAMAnimatedTabBarController;
+			target = 9D47776324C2F65D80D0B3DE222EA784 /* RAMAnimatedTabBarController */;
+			targetProxy = B3B8F3E2BFF40DAB139879961C941C16 /* PBXContainerItemProxy */;
+		};
+		6D34B1B1C81ADD9B355AD4F116BE02BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cosmos;
+			target = 224580824D4276BBCB37A928CF5E9482 /* Cosmos */;
+			targetProxy = 5FB4BBE6AE0B1A4ECA748B9B4AEE01D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		007F1066051A467FBEB0038594E9D7C2 /* Release */ = {
+		21C69DA56FDD58F6E80DADF5194BB92A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		1E0DE668965F5BE25A017CF81EE2413F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F49028ADBB725906DE8880B4D31DBFF /* Pods-Eateries.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Eateries/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Eateries/Pods-Eateries.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		63AAE6DF0E2C4E29C22DA3150A273A5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13E05F530FEA1417D1C5E7BA9AED851D /* PCLBlurEffectAlert.xcconfig */;
+			baseConfigurationReference = 109DA0E9783C54FAF14298AFD5E0579C /* RAMAnimatedTabBarController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -429,14 +620,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PCLBlurEffectAlert/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RAMAnimatedTabBarController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert.modulemap";
-				PRODUCT_MODULE_NAME = PCLBlurEffectAlert;
-				PRODUCT_NAME = PCLBlurEffectAlert;
+				MODULEMAP_FILE = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController.modulemap";
+				PRODUCT_MODULE_NAME = RAMAnimatedTabBarController;
+				PRODUCT_NAME = RAMAnimatedTabBarController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -448,9 +639,9 @@
 			};
 			name = Debug;
 		};
-		A9E11CBC1B74D7863486AC4D7E553D74 /* Release */ = {
+		3BD364D5FE994DB26F12F9EDC0806DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13E05F530FEA1417D1C5E7BA9AED851D /* PCLBlurEffectAlert.xcconfig */;
+			baseConfigurationReference = 695D0B29C1DAAA85C22BFE8ACA4050D7 /* Cosmos.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -461,18 +652,51 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PCLBlurEffectAlert/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert.modulemap";
-				PRODUCT_MODULE_NAME = PCLBlurEffectAlert;
-				PRODUCT_NAME = PCLBlurEffectAlert;
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		54B447EE67CB3C9C129D8D039F6A3468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 109DA0E9783C54FAF14298AFD5E0579C /* RAMAnimatedTabBarController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RAMAnimatedTabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RAMAnimatedTabBarController/RAMAnimatedTabBarController.modulemap";
+				PRODUCT_MODULE_NAME = RAMAnimatedTabBarController;
+				PRODUCT_NAME = RAMAnimatedTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -481,43 +705,7 @@
 			};
 			name = Release;
 		};
-		D2C907F1686120017E061A229CFA1C2D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BB0ADDD104C5DDE9F9704A338C241DA /* Pods-Eateries.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Eateries/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Eateries/Pods-Eateries.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E246FC26AF4A9832D7AA01080188D618 /* Debug */ = {
+		60DAF49CA7A9F362148D49C3C3123B2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -570,7 +758,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -581,14 +769,271 @@
 			};
 			name = Debug;
 		};
+		9F484DC10AD44572867D4FDD3E33FA03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9639CDF1AC07745288F6A40F84F163A /* PCLBlurEffectAlert.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PCLBlurEffectAlert/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert.modulemap";
+				PRODUCT_MODULE_NAME = PCLBlurEffectAlert;
+				PRODUCT_NAME = PCLBlurEffectAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A617B004F6861F3D3EA8356812F856B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9639CDF1AC07745288F6A40F84F163A /* PCLBlurEffectAlert.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PCLBlurEffectAlert/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PCLBlurEffectAlert/PCLBlurEffectAlert.modulemap";
+				PRODUCT_MODULE_NAME = PCLBlurEffectAlert;
+				PRODUCT_NAME = PCLBlurEffectAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AAB40D9DF0CFBA0C895488BC45E0B00B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F49028ADBB725906DE8880B4D31DBFF /* Pods-Eateries.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Eateries/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Eateries/Pods-Eateries.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4EAA84F44D044E108500A81C635F21E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D2E249AB2F48C5EEE796BBF3709CA3A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 695D0B29C1DAAA85C22BFE8ACA4050D7 /* Cosmos.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cosmos/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cosmos/Cosmos.modulemap";
+				PRODUCT_MODULE_NAME = Cosmos;
+				PRODUCT_NAME = Cosmos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E957AE10D61CDF217A5D8498958C8CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB0ADDD104C5DDE9F9704A338C241DA /* Pods-Eateries.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Eateries/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Eateries/Pods-Eateries.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E246FC26AF4A9832D7AA01080188D618 /* Debug */,
-				007F1066051A467FBEB0038594E9D7C2 /* Release */,
+				60DAF49CA7A9F362148D49C3C3123B2A /* Debug */,
+				C4EAA84F44D044E108500A81C635F21E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5524A6CEC08E0FF6C870EBEE6088F9B6 /* Build configuration list for PBXNativeTarget "RAMAnimatedTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C69DA56FDD58F6E80DADF5194BB92A /* Debug */,
+				54B447EE67CB3C9C129D8D039F6A3468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D6C475B9EA32C4BBF9FABE9BD31D7DC /* Build configuration list for PBXNativeTarget "Cosmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BD364D5FE994DB26F12F9EDC0806DE7 /* Debug */,
+				D2E249AB2F48C5EEE796BBF3709CA3A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80C56795D71CD291B3D91F4C103CB942 /* Build configuration list for PBXNativeTarget "Pods-Eateries" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E957AE10D61CDF217A5D8498958C8CBC /* Debug */,
+				AAB40D9DF0CFBA0C895488BC45E0B00B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -596,17 +1041,8 @@
 		C88658DC4F75726DB04C3266CD0B3051 /* Build configuration list for PBXNativeTarget "PCLBlurEffectAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				63AAE6DF0E2C4E29C22DA3150A273A5F /* Debug */,
-				A9E11CBC1B74D7863486AC4D7E553D74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F172EB7683A9D920D990E6B844A3EE1B /* Build configuration list for PBXNativeTarget "Pods-Eateries" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2C907F1686120017E061A229CFA1C2D /* Debug */,
-				1E0DE668965F5BE25A017CF81EE2413F /* Release */,
+				A617B004F6861F3D3EA8356812F856B4 /* Debug */,
+				9F484DC10AD44572867D4FDD3E33FA03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -12,8 +12,6 @@ class PopularRestTableViewCell: UITableViewCell {
     @IBOutlet weak var contentViewInCell: UIView!
     @IBOutlet weak var imageViewPopular: UIImageView!
     @IBOutlet weak var nameLabelPopular: UILabel!
-    @IBOutlet weak var locationLabelPopular: UILabel!
-    @IBOutlet weak var tyoeLabelPopular: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

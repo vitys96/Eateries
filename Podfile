@@ -6,5 +6,7 @@ target 'Eateries' do
   use_frameworks!
 
   pod "PCLBlurEffectAlert"
+pod 'RAMAnimatedTabBarController'
+pod 'Cosmos'
 
 end
