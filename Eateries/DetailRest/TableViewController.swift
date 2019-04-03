@@ -1,69 +1,44 @@
-
 import UIKit
-import PCLBlurEffectAlert
 import Cosmos
+import Lottie
+
 
 class TableViewController: UITableViewController{
     
     
-    @IBOutlet weak var imageView: UIImageView!
-    
-    var Headerview : UIView!
-    var NewHeaderLayer : CAShapeLayer!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     var toggleFavourite: Bool!
-    
-    
-    
-    private let Headerheight : CGFloat = 300
-    private let Headercut : CGFloat = 50
     var restaurant: Restaurant?
     
+    
+    
     @IBOutlet weak var starBarBtnItem: UIBarButtonItem!
+    @IBOutlet weak var imageView: UIImageView!
     
     
     
-//    @IBAction func editRest(_ sender: UIBarButtonItem) {
-//            performSegue(withIdentifier: "editRest", sender: self)
-//    }
+    @IBAction func editRest(_ sender: UIBarButtonItem) {
+            performSegue(withIdentifier: "editRest", sender: self)
+    }
     
     
     @IBAction func starBarBtnItemAction(_ sender: UIBarButtonItem) {
         if restaurant?.isFavourite == false {
-            
             restaurant?.isFavourite = true
             starBarBtnItem.tintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0.7861729452)
-            starBarBtnItem.image = UIImage(named: "starBarBtnItem2")
-            //
-            //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            //            let popularVC = storyBoard.instantiateViewController(withIdentifier: "PupularRestTableViewController") as! PupularRestTableViewController
-            ////            popularVC.popularRests.append(restaurant!)
-            //            popularVC.tableView.reloadData()
-            //            let lala = PupularRestTableViewController()
-            //            lala.popularRests.append(restaurant!)
-            //            lala.tableView.reloadData()
-            
-            //            let alert = PCLBlurEffectAlert.Controller(title: "В избранном " + "\u{2B50}", message: "Заведение было добавлено в раздел избранное", effect: UIBlurEffect(style: .extraLight), style: .alert)
-            ////            let alertAction = PCLBlurEffectAlert.Action(title: "OK", style: .cancel, handler: nil)
-            //            let alertAction1 = PCLBlurEffectAlert.Action(title: "OK", style: .cancel, handler: nil)
-            //            alert.addAction(alertAction1)
-            //            alert.configure(cornerRadius: 20)
-            //            alert.configure(buttonFont: [PCLBlurEffectAlert.ActionStyle.cancel : UIFont(name: "HelveticaNeue", size: 16)!], buttonTextColor: [PCLBlurEffectAlert.ActionStyle.cancel : UIColor.black], buttonDisableTextColor: [PCLBlurEffectAlert.ActionStyle.default : UIColor.red])
-            ////            alert.configure(overlayBackgroundColor: #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 0.2152985873))
-            //            alert.configure(titleFont: UIFont(name: "HelveticaNeue", size: 20)!, titleColor: .black)
-            //            alert.configure(buttonFont: [PCLBlurEffectAlert.ActionStyle.default : UIFont(name: "HelveticaNeue", size: 16)!])
-            //            alert.configure(backgroundColor: #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.79))
-            //            alert.configure(buttonBackgroundColor: #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.79))
-            //            alert.show()
-            //            let timeAfter = DispatchTime.now() + 3
-            //            DispatchQueue.main.asyncAfter(deadline: timeAfter){
-            //                alert.dismiss(animated: true, completion: nil)
-            //            }
-            
+            starBarBtnItem.image = UIImage(named: "heart")
         }
         else {
-            starBarBtnItem.image = UIImage(named: "starBarBtnItem")
+            starBarBtnItem.image = UIImage(named: "heart")
             starBarBtnItem.tintColor = .white
             restaurant?.isFavourite = false
+
+        }
+        guard let context = (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.persistentContainer.viewContext else { return }
+        do {
+            
+            try context.save()
+        } catch {
             
         }
     }
@@ -72,31 +47,32 @@ class TableViewController: UITableViewController{
     
     
     override func viewWillAppear(_ animated: Bool) {
+//        if editButtonBool == false {
+//            editButton = nil
+//        }
+        
+        switch restaurant?.isFavourite {
+        case nil:
+            restaurant?.isFavourite = false
+            starBarBtnItem.image = UIImage(named: "heart")
+            starBarBtnItem.tintColor = .white
+            
+        case true:
+            starBarBtnItem.image = UIImage(named: "heart")
+            starBarBtnItem.tintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0.7861729452)
+            
+        case false:
+            starBarBtnItem.image = UIImage(named: "heart")
+            starBarBtnItem.tintColor = .white
+        default:
+            break
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch restaurant?.isFavourite {
-        case nil:
-            restaurant?.isFavourite = false
-            starBarBtnItem.tintColor = .white
-            starBarBtnItem.image = UIImage(named: "starBarBtnItem")
-        case true:
-            starBarBtnItem.tintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0.7861729452)
-            starBarBtnItem.image = UIImage(named: "starBarBtnItem2")
-            
-        case false:
-            starBarBtnItem.image = UIImage(named: "starBarBtnItem")
-            starBarBtnItem.tintColor = .white
-        default:
-            break
-        }
-        
         self.title = restaurant!.name
-        //        self.UpdateView()
-        
-        //        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.9608, green: 0.7059, blue: 0.2, alpha: 1)
         
         if restaurant?.isPhoto == false {
             imageView.contentMode = .scaleAspectFit
@@ -120,8 +96,6 @@ class TableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 4:
-            return 80
-        case 5:
             if (restaurant?.isVisited)! {
                 return 60
             }
@@ -156,33 +130,35 @@ class TableViewController: UITableViewController{
             cell?.valueLabel1.textColor = .blue
             cell?.valueLabel1.text = "Открыть на карте"
         case 3:
-            cell?.isSeparatorHidden = true
-            cell?.keyImageView.image = UIImage(named: "isVisiting")
+            cell?.keyImageView.image = restaurant!.isVisited ? UIImage(named: "isVisiting") : UIImage(named: "notVisiting")
             cell?.valueLabel1.text = restaurant!.isVisited ? "Посещено" : "Не посещено"
+            
         case 4:
-            cell?.valueLabel1.isHidden = true
-            cell?.keyImageView.image = UIImage()
-            
-            createBorderCell(cell: cell!)
-            ratingCell(cell: cell!)
-            
-        case 5:
             cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             if (restaurant?.isVisited)! {
-                cell?.isSeparatorHidden = true
-                cell?.keyImageView.image = UIImage(named: "ruble")
-                cell?.valueLabel1.text = restaurant?.averageCheck
+                cell?.keyImageView.image = UIImage(named: "money")
+                cell?.valueLabel1.text = (restaurant?.averageCheck)! + " \u{20BD}"
             }
             else {
-                cell?.isHidden = true
+                cell?.isSeparatorHidden = false
+                cell?.valueLabel1.isHidden = true
+                cell?.keyImageView.image = UIImage()
+                ratingCell(cell: cell!)
             }
+        case 5:
+            cell?.selectionStyle = .none
+            cell?.isSeparatorHidden = true
+            cell?.valueLabel1.isHidden = true
+            cell?.keyImageView.image = UIImage()
+            ratingCell(cell: cell!)
+            
+        
         case 6:
             cell?.isSeparatorHidden = true
             cell?.keyImageView.image = UIImage()
             cell?.valueLabel1.isHidden = true
             
             createBorderCell(cell: cell!)
-            
             shareCell(cell: cell!)
             
         default:
@@ -191,6 +167,8 @@ class TableViewController: UITableViewController{
         cell?.backgroundColor = UIColor.clear
         return cell!
     }
+    
+    
     
     func createBorderCell(cell: UITableViewCell) {
         let border = CALayer()
@@ -251,13 +229,14 @@ class TableViewController: UITableViewController{
         labelRating.font = UIFont(name: "HelveticaNeue-Light", size: 17)
         labelRating.isEnabled = false
         
+        
         shareImageView.image = UIImage(named: "share")
         shareImageView.translatesAutoresizingMaskIntoConstraints = false
         
         cell.addSubview(shareImageView)
-        shareImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        shareImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        shareImageView.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: -1).isActive = true
+        shareImageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        shareImageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        shareImageView.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: 0).isActive = true
         shareImageView.trailingAnchor.constraint(equalTo: labelRating.leadingAnchor, constant: 0).isActive = true
     }
     
@@ -279,20 +258,16 @@ class TableViewController: UITableViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        let previousRest = self.restaurant
         if segue.identifier == "mapSegue" {
             let dvc = segue.destination as! MapViewController
             dvc.restaurant = self.restaurant
         }
-        else if segue.identifier == "editRest"
-        {
+        else if segue.identifier == "editRest" {
             let dvc2 = segue.destination as! NewEateryTableViewController
             dvc2.restaraunt = self.restaurant
+            dvc2.isFavourite = self.restaurant?.isFavourite
+            
         }
-        
-        //            dvc2.lalal = self.restaurant?.type
-        //            dvc2.lalal = self.restaurant?.type
-        
     }
 }
 

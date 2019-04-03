@@ -7,28 +7,17 @@
       <FileRef
          location = "group:Eateries.xcodeproj">
       </FileRef>
-   </Group>
-   <Group
-      location = "group:Eateries/../Detail"
-      name = "Detail">
       <FileRef
-         location = "group:Detail/EateryDetailViewController.swift">
+         location = "group:">
       </FileRef>
       <FileRef
-         location = "group:Detail/EateryDetailTableViewCell.swift">
-      </FileRef>
-   </Group>
-   <Group
-      location = "group:Eateries/../Detail"
-      name = "Detail">
-      <FileRef
-         location = "group:Detail/EateryDetailViewController.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Detail/EateryDetailTableViewCell.swift">
+         location = "group:">
       </FileRef>
    </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Eateries.xcodeproj">
    </FileRef>
 </Workspace>

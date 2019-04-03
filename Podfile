@@ -5,8 +5,10 @@ target 'Eateries' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod "PCLBlurEffectAlert"
-pod 'RAMAnimatedTabBarController'
+#pod "PCLBlurEffectAlert"
+#pod 'RAMAnimatedTabBarController'
 pod 'Cosmos'
-
+pod 'RAMPaperSwitch'
+pod 'lottie-ios'
+#pod 'SwipeCellKit'
 end

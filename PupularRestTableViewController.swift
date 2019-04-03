@@ -5,36 +5,15 @@ import CoreData
 class PupularRestTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var fetchResultController: NSFetchedResultsController<Restaurant>!
-//    var restaurants: [Restaurant] = []
 
-    public var popularRests: [Restaurant] = []
+    var popularRests: [Restaurant] = []
+
+    
+    let heartImage = UIImageView()
+    let headerOfLabel = UILabel()
+    let tinyText = UILabel()
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        let fetchRequest: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
-       
-        fetchRequest.predicate = NSPredicate(format: "isFavourite == %d", 1)
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.persistentContainer.viewContext {
-            fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            fetchResultController.delegate = self
-            do {
-                try fetchResultController.performFetch()
-                popularRests = fetchResultController.fetchedObjects!
-            }
-            catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-        
-        self.tableView.reloadData()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,12 +26,45 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        // setup
         tableView.estimatedRowHeight = 85
         tableView.rowHeight = UITableView.automaticDimension
+        
     }
     
-//    func setup
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        
+        let fetchRequest: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate(format: "isFavourite == %d", 1)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.persistentContainer.viewContext {
+            fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchResultController.delegate = self
+            do {
+                try fetchResultController.performFetch()
+                popularRests = fetchResultController.fetchedObjects!
+                if fetchResultController.fetchedObjects?.count == 0 && popularRests.count == 0 {
+                    emptyPopRestLables()
+                }
+                else {
+                    hideDescribingText()
+                }
+            }
+            catch { }
+        }
+        tableView.reloadSections(IndexSet(integer: 0), with: .none)
+    }
+
     func configNavigationController() {
         navigationController?.hidesBarsOnSwipe = false
         navigationItem.hidesSearchBarWhenScrolling = true
@@ -60,7 +72,6 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         navigationItem.searchController?.searchBar.tintColor = .black
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        //        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     // MARK: - Table view data source
@@ -74,27 +85,17 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         
         cell.backgroundColor = UIColor(hue: 0.1333, saturation: 0.3, brightness: 1, alpha: 1.0)
         cell.layer.borderColor = UIColor(hue: 0.6056, saturation: 0.26, brightness: 0.53, alpha: 1.0).cgColor
-        //        cell.layer.borderWidth = 0.3
-        //        cell.layer.cornerRadius = 2
         cell.clipsToBounds = true
         
-//                let restaurant = restaurantToDisplayAt(indexPath: indexPath)
         let restaurant = popularRests[indexPath.row]
         
         cell.imageViewPopular.image = UIImage(data: restaurant.image! as Data)
         cell.imageViewPopular.layer.cornerRadius = 10
         cell.imageViewPopular.clipsToBounds = true
         cell.nameLabelPopular.text = restaurant.name
-
-//        cell.checkImageViewPopular.isHidden = restaurants[indexPath.row].isVisited ? false: true
+        
         return cell
     }
-    
-//    func restaurantToDisplayAt(indexPath: IndexPath) -> Restaurant {
-//        let restaurant: Restaurant
-//        restaurant = restaurants[indexPath.row]
-//        return restaurant
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popularShow"
@@ -105,6 +106,52 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
                 dvc?.restaurant = popularRests[indexPath.row]
             }
         }
+    }
+    
+    private func emptyPopRestLables() {
+        
+        heartImage.image = UIImage(named: "emptyHeart")
+        view.addSubview(heartImage)
+        heartImage.translatesAutoresizingMaskIntoConstraints = false
+        heartImage.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        heartImage.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        heartImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        heartImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -150).isActive = true
+        
+        
+        headerOfLabel.text = "Нет избранных заведений"
+        headerOfLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 16)
+        headerOfLabel.textColor = .gray
+        
+        view.addSubview(headerOfLabel)
+        headerOfLabel.translatesAutoresizingMaskIntoConstraints = false
+        headerOfLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        headerOfLabel.topAnchor.constraint(equalTo: heartImage.bottomAnchor, constant: 20).isActive = true
+        headerOfLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        
+        tinyText.text = "Нажмите на значок сердца в карточке заведения, чтобы добавить его в избранное."
+        tinyText.font = UIFont(name: "HelveticaNeue ", size: 14)
+        tinyText.textColor = .gray
+        tinyText.numberOfLines = 0
+        tinyText.lineBreakMode = .byWordWrapping
+        tinyText.textAlignment = .center
+        
+        view.addSubview(tinyText)
+        tinyText.translatesAutoresizingMaskIntoConstraints = false
+        tinyText.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        tinyText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        tinyText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10).isActive = true
+        tinyText.topAnchor.constraint(equalTo: headerOfLabel.bottomAnchor, constant: 0).isActive = true
+        tinyText.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+    }
+    
+    private func hideDescribingText() {
+        heartImage.removeFromSuperview()
+        headerOfLabel.removeFromSuperview()
+        tinyText.removeFromSuperview()
+        
     }
     
 }

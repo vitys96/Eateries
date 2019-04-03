@@ -1,24 +1,24 @@
 PODS:
   - Cosmos (15.0.0)
-  - PCLBlurEffectAlert (2.1.1)
-  - RAMAnimatedTabBarController (3.0.4)
+  - lottie-ios (2.5.2)
+  - RAMPaperSwitch (3.0.0)
 
 DEPENDENCIES:
   - Cosmos
-  - PCLBlurEffectAlert
-  - RAMAnimatedTabBarController
+  - lottie-ios
+  - RAMPaperSwitch
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Cosmos
-    - PCLBlurEffectAlert
-    - RAMAnimatedTabBarController
+    - lottie-ios
+    - RAMPaperSwitch
 
 SPEC CHECKSUMS:
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
-  PCLBlurEffectAlert: 9671c027e17e9b054ed372fbecded167ea46daf9
-  RAMAnimatedTabBarController: f4df798eb3f374b80448908d3a18586421efb8f6
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  RAMPaperSwitch: 9b81604ec2e7d6dda3fd2cbac53eb012f7a5cc87
 
-PODFILE CHECKSUM: bdf8f535011210d9847b5afd115d74bb37a54978
+PODFILE CHECKSUM: 1f9a02182736548b8966bd11c5712f0b28ca0e4b
 
 COCOAPODS: 1.5.3

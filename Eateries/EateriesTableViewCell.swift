@@ -13,14 +13,15 @@ class EateriesTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let margins = UIEdgeInsets(top: 15, left: 15, bottom: -15, right: -15)
+        let margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         contentView.frame.inset(by: margins)
         contentView.layer.cornerRadius = 10
-        contentView.clipsToBounds = false
-        viewInCell.layer.borderWidth = 3
+        contentView.clipsToBounds = true
+        viewInCell.layer.borderWidth = 2
         viewInCell.layer.cornerRadius = 10
         viewInCell.layer.borderColor = UIColor.white.cgColor
+        
     }
     
     override func awakeFromNib() {
