@@ -14,7 +14,6 @@ class EateriesTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         let margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
         contentView.frame.inset(by: margins)
         contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true
@@ -23,17 +22,8 @@ class EateriesTableViewCell: UITableViewCell {
         viewInCell.layer.borderColor = UIColor.white.cgColor
         
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
     }
     
 }

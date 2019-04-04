@@ -14,7 +14,6 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
     let tinyText = UILabel()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationController()
@@ -30,12 +29,7 @@ class PupularRestTableViewController: UITableViewController, NSFetchedResultsCon
         tableView.rowHeight = UITableView.automaticDimension
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)

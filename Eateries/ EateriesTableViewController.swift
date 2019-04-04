@@ -7,11 +7,6 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
     var searchController: UISearchController!
     var filterResultArray: [Restaurant] = []
     var restaurants: [Restaurant] = []
-    @IBAction func close(segue: UIStoryboardSegue)
-    {
-        
-    }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         performFetchData()
@@ -27,8 +22,6 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
             present(pageVC, animated: true, completion: nil)
         }
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +46,6 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
         default:
             tableView.reloadData()
         }
-        
         restaurants = controller.fetchedObjects as! [Restaurant]
     }
     
@@ -61,21 +53,8 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
         tableView.endUpdates()
     }
     
-    
-    
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         searchController.searchBar.endEditing(true)
-    }
-    
-    
-    // MARK: - Table view data source
-
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchController.isActive && searchController.searchBar.text != "" {
-            return filterResultArray.count
-        }
-        return restaurants.count
     }
     
     func filterContentFor(searchText text: String)
@@ -97,100 +76,13 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
     }
     
     
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateriesTableViewCell
-        
-        cell.backgroundColor = UIColor(hue: 0.1333, saturation: 0.3, brightness: 1, alpha: 1.0)
-        cell.layer.borderColor = UIColor(hue: 0.6056, saturation: 0.26, brightness: 0.53, alpha: 1.0).cgColor
-        //
-        //        cell.layer.borderWidth = 0.3
-        //        cell.layer.cornerRadius = 2
-        cell.clipsToBounds = true
-        
-        let restaraunt = restaurantToDisplayAt(indexPath: indexPath)
-        
-        cell.thumbnailImageView.image = UIImage(data: restaraunt.image! as Data)
-        cell.thumbnailImageView.layer.cornerRadius = 37.5
-        cell.thumbnailImageView.clipsToBounds = true
-        cell.nameLabel.text = restaraunt.name
-        cell.locationLabel.text = restaraunt.location
-        cell.typeLabel.text = restaraunt.type
-        cell.checkImage.isHidden = restaurants[indexPath.row].isVisited ? false : true
-        
-        return cell
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        if !self.searchController.isActive {
-            
-            let delete =  UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler ) in
-                
-                self.restaurants.remove(at: indexPath.row)
-                //                self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                completionHandler(true)
-                
-                guard let context = (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.persistentContainer.viewContext else { return }
-                let objectToDelete = self.fetchResultController.object(at: indexPath)
-                context.delete(objectToDelete)
-                do {
-                    try context.save()
-                } catch {
-                    
-                }
-            }
-            let shareText = shareRests(firstTitle: beginningText, secTitle: adressText, nameRest: (String(describing: self.restaurants[indexPath.row].name!)), addressRest: (String(describing:self.restaurants[indexPath.row].location!)), link: linkOfRests)
-            
-            let share =  UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler ) in
-//                let defaultText = beginningText + (String(describing: self.restaurants[indexPath.row].name!)) + "\n" + adressText + (String(describing: self.restaurants[indexPath.row].location!)) + "\n Открыть в приложении: \n itms-apps://itunes.apple.com/app/id1451515320"
-                
-                
-                guard let image  = UIImage(data: self.restaurants[indexPath.row].image! as Data) else { return }
-                
-                let activityController = UIActivityViewController(activityItems: [shareText, image], applicationActivities: nil)
-                self.present(activityController, animated: true)
-                
-                completionHandler(true)
-            }
-            
-            share.image = UIImage(named: "share1")
-            share.backgroundColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
-            
-            delete.image = UIImage(named: "delete")
-            delete.backgroundColor =  UIColor(red:0.85, green:0.31, blue:0.11, alpha:1.0)
-            let confrigation = UISwipeActionsConfiguration(actions: [delete, share])
-            return confrigation
-        }
-        else {
-            return UISwipeActionsConfiguration(actions: [])
-        }
-    }
-
-    
-    // MARK: - TABLEVIEW DELEGATE
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detailSegue"
-        {
-            if let indexPath = tableView.indexPathForSelectedRow
-            {
-                let dvc = segue.destination as? TableViewController
-                dvc?.restaurant = restaurantToDisplayAt(indexPath: indexPath)
-            }
-        }
-    }
-    
-    
     // MARK: - MY FUNCTIONS
     
     private func configNavigationController() {
         navigationController?.hidesBarsOnSwipe = false
         navigationItem.hidesSearchBarWhenScrolling = true
-        navigationItem.searchController?.searchBar.keyboardAppearance = .dark
-        //        navigationItem.searchController?.searchBar.tintColor = .black
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.searchController?.searchBar.keyboardAppearance = .dark
     }
     
     
@@ -211,9 +103,6 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
         let attributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle), NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
         
-        let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes , for: .normal)
-        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         tableView.estimatedRowHeight = 85
         
@@ -232,7 +121,8 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
             
             do {
                 try fetchResultController.performFetch()
-                restaurants = fetchResultController.fetchedObjects!
+                guard let fetchObjects = fetchResultController.fetchedObjects else { return }
+                restaurants = fetchObjects
                 
                 if fetchResultController.fetchedObjects?.count == 0 && !UserDefaults.standard.bool(forKey: "rest") {
                     insertModernRests()
@@ -242,21 +132,90 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
     }
 }
 
-
-
-
-
 // MARK: - EXTENSIONS
 
-extension EateriesTableViewController: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentFor(searchText: searchController.searchBar.text!)
-        tableView.reloadData()
-    }
-}
-
 extension EateriesTableViewController {
+    
+    // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filterResultArray.count
+        }
+        return restaurants.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateriesTableViewCell
+        
+        cell.backgroundColor = UIColor(hue: 0.1333, saturation: 0.3, brightness: 1, alpha: 1.0)
+        cell.layer.borderColor = UIColor(hue: 0.6056, saturation: 0.26, brightness: 0.53, alpha: 1.0).cgColor
+        
+        cell.clipsToBounds = true
+        
+        let restaraunt = restaurantToDisplayAt(indexPath: indexPath)
+        
+        cell.thumbnailImageView.image = UIImage(data: restaraunt.image! as Data)
+        cell.thumbnailImageView.layer.cornerRadius = 37.5
+        cell.thumbnailImageView.clipsToBounds = true
+        cell.nameLabel.text = restaraunt.name
+        cell.locationLabel.text = restaraunt.location
+        cell.typeLabel.text = restaraunt.type
+        cell.checkImage.isHidden = restaurants[indexPath.row].isVisited ? false : true
+        
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        if !self.searchController.isActive {
+            let delete =  UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler ) in
+                
+                self.restaurants.remove(at: indexPath.row)
+                //                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                completionHandler(true)
+                
+                guard let context = (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.persistentContainer.viewContext else { return }
+                let objectToDelete = self.fetchResultController.object(at: indexPath)
+                context.delete(objectToDelete)
+                do {
+                    try context.save()
+                } catch {
+                    
+                }
+            }
+            let shareText = shareRests(firstTitle: beginningText, secTitle: adressText, nameRest: (String(describing: self.restaurants[indexPath.row].name!)), addressRest: (String(describing:self.restaurants[indexPath.row].location!)), link: linkOfRests)
+            
+            let share =  UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler ) in
+                guard let image  = UIImage(data: self.restaurants[indexPath.row].image! as Data) else { return }
+                let activityController = UIActivityViewController(activityItems: [shareText, image], applicationActivities: nil)
+                self.present(activityController, animated: true)
+                
+                completionHandler(true)
+            }
+            
+            share.image = UIImage(named: "share1")
+            share.backgroundColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
+            
+            delete.image = UIImage(named: "delete")
+            delete.backgroundColor =  UIColor(red:0.85, green:0.31, blue:0.11, alpha:1.0)
+            let confrigation = UISwipeActionsConfiguration(actions: [delete, share])
+            return confrigation
+        }
+        else {
+            return UISwipeActionsConfiguration(actions: [])
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let dvc = segue.destination as? TableViewController
+                dvc?.restaurant = restaurantToDisplayAt(indexPath: indexPath)
+            }
+        }
+    }
     
     private func insertModernRests() {
         var modernImages = [UIImage(named: "rest1"), UIImage(named: "rest2"), UIImage(named: "rest3")]
@@ -268,6 +227,13 @@ extension EateriesTableViewController {
     }
 }
 
+extension EateriesTableViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentFor(searchText: searchController.searchBar.text!)
+        tableView.reloadData()
+    }
+}
 
 extension EateriesTableViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -280,5 +246,3 @@ extension EateriesTableViewController: UISearchBarDelegate {
         navigationController?.hidesBarsOnSwipe = false
     }
 }
-
-

@@ -3,8 +3,8 @@ import UIKit
 class AboutTableViewController: UITableViewController {
 
     
-    let sectionsHeaders = ["Мы в социальных сетях", "Наши сайты"]
-    let sectionsContent = [["Facebook" ,"VK", "YouTube"], ["swiftbook.ru","forum.swiftbook.ru"]]
+    let sectionsHeaders = ["Соц сети", "СюдаСюда"]
+    let sectionsContent = [["Facebook" ,"VK", "YouTube"], ["Yandex","Stack Over Flow"]]
     let firstSectionLinks = ["https://www.vk.com", "https://www.yandex.ru", "https://www.google.com"]
     
     
@@ -14,11 +14,7 @@ class AboutTableViewController: UITableViewController {
 
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
+    
     
 
     // MARK: - Table view data source
@@ -59,8 +55,7 @@ class AboutTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showWebPageSegue"
-        {
+        if segue.identifier == "showWebPageSegue" {
             if let indexPath = tableView.indexPathForSelectedRow
             {
                 let dvc = segue.destination as! WebViewController

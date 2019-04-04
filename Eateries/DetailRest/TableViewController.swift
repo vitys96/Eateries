@@ -1,7 +1,5 @@
 import UIKit
 import Cosmos
-import Lottie
-
 
 class TableViewController: UITableViewController{
     
@@ -9,8 +7,6 @@ class TableViewController: UITableViewController{
     @IBOutlet weak var editButton: UIBarButtonItem!
     var toggleFavourite: Bool!
     var restaurant: Restaurant?
-    
-    
     
     @IBOutlet weak var starBarBtnItem: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
@@ -23,7 +19,8 @@ class TableViewController: UITableViewController{
     
     
     @IBAction func starBarBtnItemAction(_ sender: UIBarButtonItem) {
-        if restaurant?.isFavourite == false {
+        guard let isFav = restaurant?.isFavourite else { return }
+        if !isFav {
             restaurant?.isFavourite = true
             starBarBtnItem.tintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0.7861729452)
             starBarBtnItem.image = UIImage(named: "heart")
@@ -36,20 +33,13 @@ class TableViewController: UITableViewController{
         }
         guard let context = (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.persistentContainer.viewContext else { return }
         do {
-            
             try context.save()
         } catch {
             
         }
     }
     
-    
-    
-    
     override func viewWillAppear(_ animated: Bool) {
-//        if editButtonBool == false {
-//            editButton = nil
-//        }
         
         switch restaurant?.isFavourite {
         case nil:
@@ -78,21 +68,79 @@ class TableViewController: UITableViewController{
             imageView.contentMode = .scaleAspectFit
         }
         imageView.image = UIImage(data: restaurant!.image! as Data)
-
-        
         tableView.estimatedRowHeight = 70
         tableView.rowHeight = UITableView.automaticDimension
         
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
-
     
+    private func createBorderCell(cell: UITableViewCell) {
+        let border = CALayer()
+        let width = CGFloat(3.0)
+        border.borderColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.79)
+        border.frame = CGRect(x: 0, y: -5, width: tableView.frame.size.width, height: 7)
+        border.borderWidth = width
+        cell.layer.addSublayer(border)
+    }
+    
+    private func ratingCell(cell: UITableViewCell) {
+        let labelRatingStar = CosmosView()
+        labelRatingStar.settings.updateOnTouch = false
+        labelRatingStar.settings.starSize = 30
+        
+        cell.addSubview(labelRatingStar)
+        labelRatingStar.translatesAutoresizingMaskIntoConstraints = false
+        labelRatingStar.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        labelRatingStar.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        labelRatingStar.centerXAnchor.constraint(equalTo: (cell.centerXAnchor), constant: 50).isActive = true
+        labelRatingStar.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: 0).isActive = true
+        
+        guard let restStar = restaurant?.star else { return }
+        labelRatingStar.rating = restStar
+        
+        labelRatingStar.text = "РЕЙТИНГ"
+        labelRatingStar.settings.textFont = UIFont(name: "HelveticaNeue-Light", size: 17)!
+        labelRatingStar.settings.textMargin = -255
+    }
+    
+    private func shareCell(cell: UITableViewCell) {
+        let labelRating = UILabel()
+        let shareImageView = UIImageView()
+        
+        labelRating.translatesAutoresizingMaskIntoConstraints = false
+        labelRating.textAlignment = .center
+        cell.addSubview(labelRating)
+        labelRating.widthAnchor.constraint(equalToConstant: 130).isActive = true
+        labelRating.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        labelRating.centerXAnchor.constraint(equalTo: (cell.centerXAnchor), constant: 0).isActive = true
+        labelRating.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: 0).isActive = true
+        labelRating.text = "ПОДЕЛИТЬСЯ"
+        labelRating.font = UIFont(name: "HelveticaNeue-Light", size: 17)
+        labelRating.isEnabled = false
+        
+        
+        shareImageView.image = UIImage(named: "share")
+        shareImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        cell.addSubview(shareImageView)
+        shareImageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        shareImageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        shareImageView.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: 0).isActive = true
+        shareImageView.trailingAnchor.constraint(equalTo: labelRating.leadingAnchor, constant: 0).isActive = true
+    }
+
+}
+
+// MARK: - EXTENSIONS
+
+extension TableViewController {
+    
+// MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return UITableView.automaticDimension
     }
     
-    // Tableview Methods
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 4:
@@ -152,7 +200,7 @@ class TableViewController: UITableViewController{
             cell?.keyImageView.image = UIImage()
             ratingCell(cell: cell!)
             
-        
+            
         case 6:
             cell?.isSeparatorHidden = true
             cell?.keyImageView.image = UIImage()
@@ -166,78 +214,6 @@ class TableViewController: UITableViewController{
         }
         cell?.backgroundColor = UIColor.clear
         return cell!
-    }
-    
-    
-    
-    func createBorderCell(cell: UITableViewCell) {
-        let border = CALayer()
-        let width = CGFloat(3.0)
-        border.borderColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 0.79)
-        border.frame = CGRect(x: 0, y: -5, width: tableView.frame.size.width, height: 7)
-        border.borderWidth = width
-        cell.layer.addSublayer(border)
-    }
-    
-    func ratingCell(cell: UITableViewCell) {
-        let labelRatingStar = CosmosView()
-        labelRatingStar.settings.updateOnTouch = false
-        labelRatingStar.settings.starSize = 30
-        
-        cell.addSubview(labelRatingStar)
-        labelRatingStar.translatesAutoresizingMaskIntoConstraints = false
-        labelRatingStar.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        labelRatingStar.heightAnchor.constraint(equalToConstant: 36).isActive = true
-        labelRatingStar.centerXAnchor.constraint(equalTo: (cell.centerXAnchor), constant: 50).isActive = true
-        labelRatingStar.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: 0).isActive = true
-        
-        switch restaurant?.star {
-        case 0:
-            labelRatingStar.rating = 0
-        case 1:
-            labelRatingStar.rating = 1
-        case 2:
-            labelRatingStar.rating = 2
-        case 3:
-            labelRatingStar.rating = 3
-        case 4:
-            labelRatingStar.rating = 4
-        case 5:
-            labelRatingStar.rating = 5
-            
-        default:
-            break
-        }
-        
-        labelRatingStar.text = "РЕЙТИНГ"
-        labelRatingStar.settings.textFont = UIFont(name: "HelveticaNeue-Light", size: 17)!
-        labelRatingStar.settings.textMargin = -255
-    }
-    
-    func shareCell(cell: UITableViewCell) {
-        let labelRating = UILabel()
-        let shareImageView = UIImageView()
-        
-        labelRating.translatesAutoresizingMaskIntoConstraints = false
-        labelRating.textAlignment = .center
-        cell.addSubview(labelRating)
-        labelRating.widthAnchor.constraint(equalToConstant: 130).isActive = true
-        labelRating.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        labelRating.centerXAnchor.constraint(equalTo: (cell.centerXAnchor), constant: 0).isActive = true
-        labelRating.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: 0).isActive = true
-        labelRating.text = "ПОДЕЛИТЬСЯ"
-        labelRating.font = UIFont(name: "HelveticaNeue-Light", size: 17)
-        labelRating.isEnabled = false
-        
-        
-        shareImageView.image = UIImage(named: "share")
-        shareImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        cell.addSubview(shareImageView)
-        shareImageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        shareImageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        shareImageView.centerYAnchor.constraint(equalTo: (cell.centerYAnchor), constant: 0).isActive = true
-        shareImageView.trailingAnchor.constraint(equalTo: labelRating.leadingAnchor, constant: 0).isActive = true
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

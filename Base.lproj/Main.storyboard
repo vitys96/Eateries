@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uDv-SI-cUs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uDv-SI-cUs">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -322,32 +322,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tci-mn-s9H">
-                                                    <rect key="frame" x="84" y="54" width="60" height="30"/>
-                                                    <color key="backgroundColor" red="0.8141259517766497" green="0.40184379982595636" blue="0.29539165728575589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                                    <state key="normal" title="Нет">
-                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="toggleIsVisited:" destination="91X-ra-dxQ" eventType="touchUpInside" id="Mtw-X2-K0f"/>
-                                                    </connections>
-                                                </button>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdW-DY-82R">
-                                                    <rect key="frame" x="16" y="54" width="60" height="30"/>
-                                                    <color key="backgroundColor" red="0.51187222896223272" green="0.74938531091370564" blue="0.43040734702022732" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="gvy-LQ-GdG"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="kgk-KW-n5m"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                                    <state key="normal" title="Да">
-                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="toggleIsVisited:" destination="91X-ra-dxQ" eventType="touchUpInside" id="hkB-pq-1rU"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Средний чек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQa-F5-a2q">
                                                     <rect key="frame" x="188" y="11" width="116" height="23"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
@@ -371,19 +345,12 @@
                                                 </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tci-mn-s9H" firstAttribute="leading" secondItem="kdW-DY-82R" secondAttribute="trailing" constant="8" id="5YP-t7-tfw"/>
-                                                <constraint firstItem="tci-mn-s9H" firstAttribute="height" secondItem="kdW-DY-82R" secondAttribute="height" id="A9F-p3-yV9"/>
-                                                <constraint firstItem="tci-mn-s9H" firstAttribute="width" secondItem="kdW-DY-82R" secondAttribute="width" id="BGH-9Y-vWI"/>
-                                                <constraint firstItem="tci-mn-s9H" firstAttribute="bottom" secondItem="kdW-DY-82R" secondAttribute="bottom" id="Poe-Lc-DhC"/>
                                                 <constraint firstItem="QQa-F5-a2q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aj7-dr-otu" secondAttribute="trailing" constant="8" symbolic="YES" id="RnZ-T8-xvL"/>
                                                 <constraint firstItem="QQa-F5-a2q" firstAttribute="top" secondItem="AXe-6f-Ow8" secondAttribute="top" constant="11" id="g20-Uv-RGh"/>
                                                 <constraint firstAttribute="trailing" secondItem="QQa-F5-a2q" secondAttribute="trailing" constant="16" id="mpS-3l-nti"/>
-                                                <constraint firstItem="B13-0c-6Q4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tci-mn-s9H" secondAttribute="trailing" constant="8" symbolic="YES" id="ncX-Va-HgC"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tci-mn-s9H" secondAttribute="trailing" constant="20" symbolic="YES" id="njo-LN-Alr"/>
-                                                <constraint firstAttribute="bottom" secondItem="kdW-DY-82R" secondAttribute="bottom" constant="10.5" id="p1M-Rg-Yma"/>
                                                 <constraint firstAttribute="trailing" secondItem="B13-0c-6Q4" secondAttribute="trailing" constant="20" id="u4b-lN-Io8"/>
                                                 <constraint firstAttribute="bottom" secondItem="B13-0c-6Q4" secondAttribute="bottom" constant="16" id="uJ2-Gd-UpK"/>
-                                                <constraint firstItem="kdW-DY-82R" firstAttribute="leading" secondItem="AXe-6f-Ow8" secondAttribute="leading" constant="16" id="zsI-Qi-fqA"/>
+                                                <constraint firstItem="B13-0c-6Q4" firstAttribute="top" secondItem="QQa-F5-a2q" secondAttribute="bottom" constant="21.5" id="va8-u4-Nit"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
@@ -417,12 +384,10 @@
                         <outlet property="contentViewOfSwitcher" destination="AXe-6f-Ow8" id="eBZ-iX-bt5"/>
                         <outlet property="imageView" destination="E0L-is-0ow" id="Ind-mY-eZc"/>
                         <outlet property="nameTextField" destination="Nk9-oL-XKM" id="gwH-el-aZt"/>
-                        <outlet property="noButtonOutlet" destination="tci-mn-s9H" id="ajc-ty-KwV"/>
                         <outlet property="priceLabel" destination="B13-0c-6Q4" id="gzo-C3-zAw"/>
                         <outlet property="starsRating" destination="CsV-t5-ESv" id="KHG-LP-HId"/>
-                        <outlet property="switch" destination="ysb-nH-CjH" id="1W3-xm-Zdq"/>
                         <outlet property="typeTextField" destination="Z4p-bn-fpu" id="kfP-cb-dYN"/>
-                        <outlet property="yesButtonOutlet" destination="kdW-DY-82R" id="KBi-6G-Csv"/>
+                        <outlet property="visitSwitch" destination="ysb-nH-CjH" id="7LC-L6-8Y5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMd-R6-FdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -493,7 +458,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pageBtnAction:" destination="eul-xU-7gf" eventType="touchUpInside" id="RIm-VW-Ntq"/>
+                                    <action selector="pageBtnAction:" destination="eul-xU-7gf" eventType="touchUpInside" id="EGp-3A-eUJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Создайте свой список любимых ресторанов" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-wb-Y2v">
@@ -529,6 +494,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="zEn-Q4-6eD" id="6zl-nj-h4f"/>
+                        <outlet property="pageButton" destination="MhX-Tm-2ga" id="q5m-E9-Jhr"/>
                         <outlet property="pageControll" destination="J9J-Ya-Xrc" id="tHZ-TN-yWg"/>
                         <outlet property="subheaderlbl" destination="DrS-wb-Y2v" id="mqM-aw-aO2"/>
                     </connections>

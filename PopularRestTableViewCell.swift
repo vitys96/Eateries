@@ -5,16 +5,14 @@ class PopularRestTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
         
-//        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         shadowView.clipsToBounds = false
         shadowView.layer.cornerRadius = 10
         shadowView.layer.shadowColor = UIColor.black.cgColor
         shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
         shadowView.layer.shadowOpacity = 6
         shadowView.layer.shadowRadius = 3
-//        shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 10).cgPath
     }
 
     @IBOutlet weak var checkImageViewPopular: UIImageView!
